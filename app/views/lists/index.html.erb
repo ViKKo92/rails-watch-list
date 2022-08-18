@@ -1,0 +1,13 @@
+<div class="main-container">
+  <h1>Your lists</h1>
+
+  <div class="list-cards">
+    <% @lists.each do |list| %>
+      <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/736x/db/53/25/db5325e437a9fe4c313c70814ba7a396.jpg)">
+        <p><%= link_to(list.name, list_path(list)) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <p><%= link_to("Add a new list", new_list_path) %></p>
+</div>
