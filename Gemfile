@@ -73,3 +73,4 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
 
 gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
