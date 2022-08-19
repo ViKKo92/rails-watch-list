@@ -1,6 +1,6 @@
 class Movie < ApplicationRecord
   has_many :bookmarks
-  before_destroy :check_for_orders
+  # before_destroy :check_for_orders
 
   validates :title, presence: true
   validates :title, uniqueness: true
