@@ -20,7 +20,7 @@ index = 0
 Movie.destroy_all
 List.destroy_all
 
-10.times do
+20.times do
   movie = Movie.new(
     title: movies[index]["original_title"], 
     overview: movies[index]["overview"],
@@ -29,9 +29,8 @@ List.destroy_all
   )
   movie.save
   index = index + 1
+end
 
 List.create(name: "Classic movies")
 List.create(name: "Fairy Tales")
 List.create(name: "Documentaries")
-
-end

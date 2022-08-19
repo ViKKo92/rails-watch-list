@@ -1,0 +1,12 @@
+<div class="main-container">
+  <div class="movie-card">
+    <div class="left-wrapper">
+      <img src="<%= @movie.poster_url%>" alt="">
+    </div>
+    <div class="right-wrapper">
+      <h2><%= @movie.title %></h2>
+      <p><%= @movie.overview %></p>
+      <p><i class="fa-solid fa-star"></i> <%= @movie.rating %></p>
+    </div>
+  </div>
+</div>

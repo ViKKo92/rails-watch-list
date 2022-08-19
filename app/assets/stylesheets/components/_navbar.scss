@@ -1,12 +1,45 @@
-.navbar-lewagon {
+.navbar {
+  background: #370031;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar-container {
+  width: 1300px;
+  margin: 0px auto;
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: lighter;
+  color: white;
+  margin: 0px;
+} 
+
+.navbar-link-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-link-wrapper a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: white;
+  margin: 0px;
+  border: 1px solid white;
+  padding: 10px 10px 10px 10px;
 }
+
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }

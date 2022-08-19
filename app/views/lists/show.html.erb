@@ -1,17 +1,24 @@
 <div class="main-container">
-  <h1><%= @list.name %></h1>
-  <p><%= link_to("Delete this list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) %></p>
+  <div class="show-header">
+    <h2><%= @list.name %></h2>
+    <div class="show-navigation">
+      <%= link_to("Add new bookmark", list_new_bookmark_path(@list), class: "btn btn-primary") %>
+      <%= link_to("Delete this list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-warning") %>
+    </div>
+  </div>
   <div class="bookmarks-container">
-    <p><%= link_to("Add a new bookmark", list_new_bookmark_path(@list)) %></p>
     <% @bookmarks.each do |bookmark| %>
       <div class="bookmark-card">
-        <p><%= bookmark.comment %></p>
-        <p><%= bookmark.movie.title %></p>
-        <p><%= bookmark.movie.overview %></p>
-        <p><%= bookmark.movie.rating %></p>
+        <img src="<%= bookmark.movie.poster_url%>" alt="" class="movie-poster">
+        <h3 id="title-link"><%= link_to(bookmark.movie.title, movie_path(bookmark.movie)) %></h3>
+        <div class="icons-wrapper">
+          <p><i class="fa-solid fa-star"></i> <%= bookmark.movie.rating %></p>
+          <%= link_to delete_bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash-can"></i>
+          <% end %>
+        </div>
+        <p id="comment-text">"<%= bookmark.comment %>"</p>
       </div>
-      
-      <img src="<%= bookmark.movie.poster_url%>" alt="">
     <% end %>
   </div>
 </div>

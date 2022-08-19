@@ -24,4 +24,54 @@
     font-weight: bolder;
     color: #9c6d1c;
   }
-}
+ }
+
+  .bookmark-card {
+    width: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 10px 10px 10px lightgray;
+    border: 1px solid lightgray;
+
+    .movie-poster {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .icons-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      p {
+        margin: 0px;
+      }
+    }
+  }
+
+  #title-link {
+    height: 70px;
+  }
+
+  #title-link a {
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #370031;
+  }
+
+  #comment-text {
+   font-style: italic;
+  }
+
+  .movie-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    width: 1000px;
+
+    .right-wrapper {
+      width: 400px;
+     }
+  }
