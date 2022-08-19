@@ -3,7 +3,7 @@
 
   <div class="list-cards">
     <% @lists.each do |list| %>
-      <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.key == nil ? image_path("https://images.adsttc.com/media/images/58d5/3a58/e58e/ce48/a700/003f/large_jpg/002.jpg?1490369108%20(2)") : cl_image_path(list.photo.key) %>')">
+      <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.key == nil ? image_path("https://images.adsttc.com/media/images/58d5/3a58/e58e/ce48/a700/003f/large_jpg/002.jpg?1490369108%20(2)") : cl_image_path(list.photo.key, :cloud_name => "dnexemt1e") %>')">
         <p><%= link_to(list.name, list_path(list)) %></p>
       </div>
     <% end %>
