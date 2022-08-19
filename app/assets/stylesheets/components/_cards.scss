@@ -4,12 +4,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-rows: auto;
  }
 
  .list-card {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 300px;
   padding: 0px;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,12 +17,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 10px 10px 10px lightgray;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
 
-  p {
+  a {
     text-align: center;
     font-size: 30px;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
     font-weight: bolder;
-    color: #9c6d1c;
+    color: white;
   }
  }
 
